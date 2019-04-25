@@ -1,17 +1,18 @@
 const path = require('path');
 
 module.exports = {
-  entry: './src/index.jsx',
+  entry: './server/index.js',
   mode: "production",
   output: {
-    filename: 'main.js',
+    filename: "app.js",
     path: path.resolve(__dirname, 'dist')
   },
+  target: 'node',
   module: {
     rules: [
       {
         test: /\.(js|jsx)$/,
-        // exclude: /node_modules/,
+        exclude: /node_modules/,
         use: {
           loader: "babel-loader",
           options: {
