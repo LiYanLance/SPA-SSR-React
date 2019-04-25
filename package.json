@@ -4,9 +4,11 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "build:client": "webpack"
+    "build:client": "webpack",
+    "start": "yarn build:client && node server.js"
   },
   "dependencies": {
+    "express": "^4.16.4",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.0"
